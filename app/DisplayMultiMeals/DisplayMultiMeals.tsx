@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { displayMealType } from "../Types/displayMeal.type";
 
@@ -27,16 +26,9 @@ export default function DisplayMultiMeals({ meals }: DisplayMultiMealsProps) {
             />
           </div>
 
-          <div className="name mt-3 px-4 text-center text-base font-semibold tracking-tight text-stone-900">
+          <div className="name mt-3 px-4 pb-5 text-center text-base font-semibold tracking-tight text-stone-900">
             <p>{meal.strMeal}</p>
           </div>
-
-          <Link
-            href={`/Meal/${meal.idMeal}`}
-            className="mx-4 mb-4 mt-3 block rounded-full bg-orange-800 py-2.5 text-center text-sm font-medium text-white transition hover:bg-orange-950"
-          >
-            View Details
-          </Link>
         </div>
       ))}
     </div>
